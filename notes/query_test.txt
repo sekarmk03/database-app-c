@@ -1,0 +1,62 @@
+1. Menampilkan seluruh tabel
+          SHOW tables;
+2. Mendeskripsikan skema 1 Tabel
+          DESC penonton;
+3. Menampilkan seluruh query yg dapat digunakan
+          SHOW queries;
+4. Menambah data baru
+   *SUKSES :
+          INSERT penonton V005 Azar_Nuzy F002 2;
+          INSERT list_film F009 Friend_Zone Chayanoop_Boonprakob 55000;
+   *GAGAL :
+          INSERT transaksi 9 V005 100000 Group;
+          -> tidak dapat menambah record secara langsung (lewat tabel penonton)
+          INSERT penonton V002 Robert F001 1;
+          -> id sudah ada (id harus unique)
+5. Mengupdate data lama
+   *SUKSES :
+          UPDATE penonton V003 Sekar_Madu_K F004 1;
+          UPDATE list_film F007 Kimi_No_Nawa Makoto_Shinkai 45000;
+   *GAGAL :
+          UPDATE transaksi 9 V005 50000 Single;
+          -> tidak dapat mengubah data record secara langsung (lewat tabel penonton)
+          UPDATE list_film F011 The_Conjuring James_Wan 45000;
+          -> id tidak ditemukan (harus insert baru, bukan update)
+6. Menambah/Mengupdate data
+    *SUKSES :
+          INSERT UPDATE list_film F006 Spongebob_Squarepants Hillenburg 35000;
+          -> di update karena data sudah ada
+          INSERT UPDATE penonton V004 Ridha_Sam F005 4;
+          -> ditambah baru karena data belum ada
+7. Menghapus data
+   *SUKSES :
+          DELETE list_film F008;
+   *GAGAL :
+          DELETE transaksi 5;
+          -> tidak dapat menghapus data transaksi
+          DELETE penonton V020;
+          -> id tidak ditemukan / data belum ada
+8. Menampilkan dan join tabel
+   *SUKSES :
+          SELECT transaksi;
+          SELECT JOIN transaksi penonton list_film;
+   *GAGAL :
+          SELECT JOIN transaksi penonton;
+          -> untuk saat ini hanya bisa join 3 tabel
+9. Query tidak tersedia
+          CREATE table studio;
+10. Tabel tidak disebutkan/salah/tidak ada
+          INSERT F006 Spongebob Hillenburg 30000;
+11. Value lebih/kurang dari kolom
+          UPDATE list_film F007 Kimi_No_Nawa 40000;
+          -> value kurang
+          UPDATE list_film F007 Kimi_No_Nawa Makoto_Shinkai 40000 Studio_1;
+          -> value lebih
+12. Query tidak lengkap
+          UPDATE;
+13. Masukan value melebihi karakter yang disediakan
+          INSERT penonton V011 Uvuvwevwevwe_Onyetenyevwe_Ugwemubwemugwemubwem_Osas F005 1;
+          -> nama(51) melebihi batas karakter
+14. Keluar dari program
+          jangan lupa bahagia hari ini;
+          EXIT;

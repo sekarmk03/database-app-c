@@ -1,0 +1,27 @@
+list_film.dat
+id_film judul_film sutradara harga
+F001 Geez_n_Ann Rizki_Balki 45000
+F002 Doraemon_SBM_2 Ruichi_Yagi 35000
+F003 Joker Todd_Phillips 40000
+F004 Interstellar Christopher_Nolan 25000
+F005 Annabelle John_Leonetti 25000
+F006 Spongebob Hillenburg 30000
+F007 Kimi_No_Nawa Makoto 40000
+F008 Train_to_Busan Yeon_Sang-Ho 30000
+#### #### #### ####
+
+penonton.dat
+id_penonton nama_penonton id_film banyak_tiket
+V001 Rahma_Maulida F003 2
+V002 Aditya_Hasta F001 1
+V003 SekarMadu F008 3
+V006 CahyaGumilang F007 2
+#### #### #### ####
+
+transaksi.dat
+id_trans id_penonton total_harga keterangan
+1 V001 87000 Group
+2 V002 48500 Single
+3 V003 100500 Group
+4 V006 87000 Group
+#### #### #### ####
